@@ -50,14 +50,14 @@
 использовать объекты Mapper'ы, загружать и сохранять сущности в базе данных. 
 Другой способ заключается в использовании ORM, таких как Doctrine или Propel.
 
-For this tutorial, we are going to create a very simple model by creating an
-``AlbumTable`` class that uses the ``Zend\Db\TableGateway\TableGateway`` class
-in which each album object is an ``Album`` object (known as an *entity*). This is an
-implementation of the Table Data Gateway design pattern to allow for interfacing
-with data in a database table. Be aware though that the Table Data Gateway
-pattern can become limiting in larger systems. There is also a temptation to put
-database access code into controller action methods as these are exposed by
-``Zend\Db\TableGateway\AbstractTableGateway``. *Don’t do this*!
+Сейчас мы создадим простую модель класс - ``AlbumTable``, 
+который использует класс ``Zend\Db\TableGateway\TableGateway``.
+В этой модели каждый альбом объекта ``Album`` (известный как *сущность *). Это
+реализация Table Data Gateway(Шлюза к данным таблицы) - патерн проектирования
+для обеспечения взаимодействия с данными в таблице базы данных. Помните, однако, что патерн Table Data Gateway
+(шлюз к  данным таблицы) может стать проблемой в больших системах. Существует также искушение поставить код
+доступа к базе данных в контроллер действий, поскольку это открывает методы
+``Zend\Db\TableGateway \ AbstractTableGateway ``. *Не делайте этого *!
 
 Let’s start by creating a file called ``Album.php`` under ``module/Album/src/Album/Model``:
 

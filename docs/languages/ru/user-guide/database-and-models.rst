@@ -18,7 +18,6 @@
 Мы будем использовать MySQL, с помощью PHP PDO-драйверa, поэтому создадим базу данных с именем
 ``zf2tutorial``, и запустить приведенный ниже SQL-код, чтобы создать таблицу ``Альбом``, 
 добавив туда данные.
-
 .. code-block:: sql
 
     CREATE TABLE album (
@@ -44,13 +43,12 @@
 
 Файл Модели
 ---------------
-
-Zend Framework does not provide a ``Zend\Model`` component as the model is your
-business logic and it’s up to you to decide how you want it to work. There are
-many components that you can use for this depending on your needs. One approach
-is to have model classes represent each entity in your application and then
-use mapper objects that load and save entities to the database. Another is to
-use an ORM like Doctrine or Propel.
+В Zend Framework не обязательно использовать компонент ``Zend\Модель``  в качестве модели для вашей
+бизнес-логики, выбор как работать с данными остается за вами. Есть
+множество компонентов, которые вы можете использовать для этого в зависимости от ваших потребностей. 
+Один подход - это иметь классы модели представления каждого сущности в Вашем приложении, а затем
+использовать объекты Mapper'ы, загружать и сохранять сущности в базе данных. 
+Другой способ заключается в использовать ORM, таких как Doctrine или Propel.
 
 For this tutorial, we are going to create a very simple model by creating an
 ``AlbumTable`` class that uses the ``Zend\Db\TableGateway\TableGateway`` class

@@ -15,10 +15,9 @@
 ``Zend \ Db \ TableGateway \ TableGateway``, который используется для поиска, вставки, обновления и
 удаление строк из таблицы базы данных.
 
-We are going to use MySQL, via PHP’s PDO driver, so create a database called
-``zf2tutorial``, and run these SQL statements to create the album table with some
-data in it.
-
+Мы будем использовать MySQL, с помощью PHP PDO-драйверa, поэтому создадим базу данных с именем
+``zf2tutorial``, и запустить эти приведенный ниже SQL-код, чтобы создать таблицу ``Альбом``, 
+добавив туда данные.
 .. code-block:: sql
 
     CREATE TABLE album (
@@ -38,12 +37,11 @@ data in it.
     INSERT INTO album (artist, title)
         VALUES  ('Gotye',  'Making  Mirrors');
 
-(The test data chosen happens to be the Bestsellers on Amazon UK at the time of
-writing!)
+(Эти тестовые данные взяты из топа Amazon UK на момент написания статьи)
 
-We now have some data in a database and can write a very simple model for it.
+Мы записали некоторые данные в нашу базу данных и сейчас создадим простую модель для работы с ними.
 
-The model files
+Файл Модели
 ---------------
 
 Zend Framework does not provide a ``Zend\Model`` component as the model is your
